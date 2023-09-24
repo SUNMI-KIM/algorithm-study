@@ -1,5 +1,4 @@
 #https://www.acmicpc.net/problem/10597
-
 visited = [0] * 51
 sequence = []
 pre = [int(x) for x in str(input().strip())]
