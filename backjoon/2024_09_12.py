@@ -22,3 +22,17 @@ while True:
                 print(" ", end = "")
         print()
     except: break
+
+#https://www.acmicpc.net/problem/1914
+def solve(N, start, end, mid):
+    if N == 0:
+        return
+    
+    solve(N-1, start, mid, end)
+    print(start, end)
+    solve(N-1, mid, end, start)
+
+N = int(input())
+print(2 ** N - 1)
+if (N <= 20):
+    solve(N, 1, 3, 2)
